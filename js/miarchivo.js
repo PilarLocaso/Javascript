@@ -1,12 +1,19 @@
-var parcial,final,promedio;
-parcial = parseFloat(prompt("Parcial"));
-final = parseFloat(prompt("Final"));
-promedio = (parcial+final)/2;
+function CalcularPromedio(){
+    let Nota1 = parseInt(prompt("Ingresar la nota del primer parcial"));
+    let Nota2 = parseInt(prompt("Ingresar la nota del segundo parcial"));
+    let Nota3 = parseInt(prompt("Ingresar la nota del final"));
 
-if(promedio >= 10.5){
- document.write("El promedio es "+promedio+" APROBADO");
+    let NotaFinal = (Nota1 + Nota2 + Nota3) /3; 
+    let mensaje = `Tu promedio es de ${NotaFinal}`;
+    alert(mensaje);
 
-}else{
- document.write("El promedio es "+promedio+" DESAPROBADO");
+    if(NotaFinal < 7){
+        let mensaje = `Lamentablemente, desaprobaste el cuatrimestre (tu nota es ${NotaFinal})`;
+        alert(mensaje);
+    }else{
+        let mensaje = `Felicitaciones! Aprobaste el cuatrimestre (tu nota es ${NotaFinal})`;
+        alert(mensaje);
+    }  
 }
 
+CalcularPromedio();
